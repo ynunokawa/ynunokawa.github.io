@@ -31,6 +31,13 @@
         align-items: center;
         justify-content: center;
         overflow:hidden;
+
+        position:relative; /* 絶対配置の基準点 */
+        width:100%; /* 600px以下は幅いっぱいに広げる */
+        max-width:600px; /* 最大幅の指定 */
+        height:300px; /* 高さの指定 */
+        margin:0 auto; /* ブロック要素の中央揃え */
+        background:#fff; /* 背景色 */
       }
 
       h1, h2, h3, h4, h5, h6 {
@@ -89,6 +96,12 @@
         @media (max-width: 600px) {
           max-width: 100vw;
         }
+
+        position:absolute; /* 絶対配置 */
+        top:50%; /* 上から半分 */
+        left:50%; /* 左から半分 */
+        width:100%; /* 大枠と同じ幅に */
+        margin:-1.5em 0 0 -50%; /* 要素の大きさの半分引く */
       }
 
       /*#map {
