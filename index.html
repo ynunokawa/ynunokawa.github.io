@@ -31,13 +31,6 @@
         align-items: center;
         justify-content: center;
         overflow:hidden;
-
-        position:relative; /* 絶対配置の基準点 */
-        width:100%; /* 600px以下は幅いっぱいに広げる */
-        max-width:600px; /* 最大幅の指定 */
-        height:300px; /* 高さの指定 */
-        margin:0 auto; /* ブロック要素の中央揃え */
-        background:#fff; /* 背景色 */
       }
 
       h1, h2, h3, h4, h5, h6 {
@@ -90,13 +83,21 @@
       }
 
       #text {
+        position:relative; /* 絶対配置の基準点 */
+        width:100%; /* 600px以下は幅いっぱいに広げる */
+        max-width:1200px; /* 最大幅の指定 */
+        height:600px; /* 高さの指定 */
+        margin:0 auto; /* ブロック要素の中央揃え */
+
         max-width: 75vw;
         text-align: center;
         z-index: 2;
         @media (max-width: 600px) {
           max-width: 100vw;
         }
+      }
 
+      #innercentroid {
         position:absolute; /* 絶対配置 */
         top:50%; /* 上から半分 */
         left:50%; /* 左から半分 */
@@ -137,8 +138,10 @@
 
   <body>
     <div id="text">
-      <h2>Yusuke Nunokawa</h2>
-      <p><a href="https://github.com/ynunokawa">GitHub</a></p>
+      <div id="innercentroid">
+        <h2>Yusuke Nunokawa</h2>
+        <p><a href="https://github.com/ynunokawa">GitHub</a></p>
+      </div>
     </div>
     <div id="map"></div>
   </body>
