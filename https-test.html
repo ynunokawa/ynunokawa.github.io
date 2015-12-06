@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title></title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+        html, body, #map {
+          height: 100%;
+          font-family: "Avenir LT W01 35 Light", "Century Gothic", Helvetica, Arial, sans-serif;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+
+    <script>
+    $(function() {
+
+      function initMap() {
+        var map = L.map('map', { zoomControl: false }).setView([35.75, 139.65], 10);
+
+        L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+            '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+          id: 'osm'
+        }).addTo(map);
+      }
+
+      function getDay() {
+
+      }
+
+      initMap();
+
+    });
+    </script>
+  </body>
+</html>
