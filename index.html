@@ -1,152 +1,101 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Yusuke Nunokawa">
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Identity by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
 
-    <title>Yusuke Nunokawa</title>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    <!-- Leaflet -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img style="width:150px;" src="images/avatar.jpg" alt="" /></span>
+							<h1>Yusuke Nunokawa</h1>
+							<p>Web Developer</p>
+						</header>
+						<!--
+						<hr />
+						<h2>Extra Stuff!</h2>
+						<form method="post" action="#">
+							<div class="field">
+								<input type="text" name="name" id="name" placeholder="Name" />
+							</div>
+							<div class="field">
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<div class="select-wrapper">
+									<select name="department" id="department">
+										<option value="">Department</option>
+										<option value="sales">Sales</option>
+										<option value="tech">Tech Support</option>
+										<option value="null">/dev/null</option>
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+							</div>
+							<div class="field">
+								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
+							</div>
+							<div class="field">
+								<label>But are you a robot?</label>
+								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
+								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+							</div>
+							<ul class="actions">
+								<li><a href="#" class="button">Get Started</a></li>
+							</ul>
+						</form>
+						<hr />
+						-->
+						<footer>
+							<ul class="icons">
+								<li><a href="https://twitter.com/_ynunokawa" class="fa-twitter">Twitter</a></li>
+								<!--<li><a href="#" class="fa-instagram">Instagram</a></li>-->
+								<li><a href="https://www.facebook.com/nuno0825" class="fa-facebook">Facebook</a></li>
+								<li><a href="https://github.com/ynunokawa" class="fa-github">GitHub</a></li>
+							</ul>
+							<ul class="icons">
+								<li><a href="http://muxlab.github.io" class="fa-map">MUX Lab</a></li>
+								<li><a href="https://keiopicnicclub.github.io" class="fa-heart">KEIO Picnic Club</a></li>
+							</ul>
+						</footer>
+					</section>
 
-    <style>
-      html,
-      body {
-        background: white;
-        color: #abf2e3;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        margin:0;
-        font-size: 16px;
-        font-family: Raleway, Helvetica, "Meiryo";
-        user-select: none;
-      }
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Yusuke Nunokawa</li>
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
 
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow:hidden;
-      }
+			</div>
 
-      h1, h2, h3, h4, h5, h6 {
-        color: #20CCA8;
-        font-family: Raleway, Helvetica, "Meiryo";
-        margin: 0;
-        font-weight: 100;
-      }
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
 
-      h1, h2 {
-        letter-spacing: .2rem;
-      }
-
-      h3, h4, h5, h6 {
-        letter-spacing: .1rem;
-      }
-
-      h1 {
-        @include font-size(9);
-        @media (max-width: 600px) {
-          @include font-size(6);
-          line-height: 5rem;
-          font-weight: 100;
-        }
-      }
-
-      h3 {
-        @include font-size(5);
-        @media (max-width: 600px) {
-          @include font-size(2.5);
-          font-weight: 100;
-        }
-      }
-
-      p {
-        @include font-size(2);
-        @media (max-width: 600px) {
-          @include font-size(1);
-        }
-      }
-
-      a {
-        color: #abf2e3;
-        text-decoration: none;
-        border-bottom: 1px solid #abf2e3;
-      }
-
-      a:hover {
-        color: #20CCA8;
-        border-bottom: 1px solid #20CCA8;
-      }
-
-      #text {
-        position:relative; /* 絶対配置の基準点 */
-        width:100%; /* 600px以下は幅いっぱいに広げる */
-        max-width:450px; /* 最大幅の指定 */
-        height:150px; /* 高さの指定 */
-        margin:0 auto; /* ブロック要素の中央揃え */
-
-        /*max-width: 75vw;*/
-        text-align: center;
-        z-index: 2;
-        @media (max-width: 600px) {
-          max-width: 100vw;
-        }
-      }
-
-      #innercentroid {
-        position:absolute; /* 絶対配置 */
-        top:50%; /* 上から半分 */
-        left:50%; /* 左から半分 */
-        width:100%; /* 大枠と同じ幅に */
-        margin:-1.5em 0 0 -50%; /* 要素の大きさの半分引く */
-      }
-
-      /*#map {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        margin:0;
-      }*/
-      #map {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.2;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <!-- Leaflet -->
-    <script src="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"></script>
-
-    <script src="js/map.js"></script>
-
-  </head>
-
-  <body>
-    <div id="text">
-      <div id="innercentroid">
-        <h2>Yusuke Nunokawa</h2>
-        <p><a href="https://github.com/ynunokawa">GitHub</a></p>
-        <p><a href="https://twitter.com/_ynunokawa">Twitter</a></p>
-        <p><a href="http://muxlab.github.io/">MUX Lab</a></p>
-        <p><a href="https://keiopicnicclub.github.io/">KEIO Picnic Club</a></p>
-      </div>
-    </div>
-    <div id="map"></div>
-  </body>
+	</body>
 </html>
